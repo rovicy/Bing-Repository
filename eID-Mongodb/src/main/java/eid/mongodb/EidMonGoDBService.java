@@ -5,7 +5,5 @@ package eid.mongodb;
  */
 
 public class EidMonGoDBService {
-
     
-
 }
