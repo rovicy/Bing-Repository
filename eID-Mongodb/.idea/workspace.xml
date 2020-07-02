@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="48edc1cf-14f3-4344-99a7-f9ea4df43042" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eid/mongodb/EidMonGoDBService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mongodb.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\WorkSpace\JavaWorkSpace\Git-Repository\Bing-Repository\eID-Mongodb\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\AllMaven\repository" />
+        <option name="mavenHome" value="D:/SoftwareSetup/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\SoftwareSetup\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1e4i7O6rZzn5Kly2emDyXpd8owk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48edc1cf-14f3-4344-99a7-f9ea4df43042" name="Default Changelist" comment="" />
+      <created>1593587097767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593587097767</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="57" key="#Notifications" timestamp="1593587175165">
+      <screen x="83" y="0" width="1357" height="960" />
+    </state>
+    <state x="254" y="57" key="#Notifications/83.0.1357.960@83.0.1357.960" timestamp="1593587175165" />
+    <state x="492" y="180" key="FileChooserDialogImpl" timestamp="1593676789853">
+      <screen x="83" y="0" width="1357" height="960" />
+    </state>
+    <state x="492" y="180" key="FileChooserDialogImpl/83.0.1357.960@83.0.1357.960" timestamp="1593676789853" />
+    <state x="146" y="0" key="SettingsEditor" timestamp="1593677146693">
+      <screen x="83" y="0" width="1357" height="960" />
+    </state>
+    <state x="146" y="0" key="SettingsEditor/83.0.1357.960@83.0.1357.960" timestamp="1593677146693" />
+  </component>
+</project>
