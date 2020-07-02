@@ -1,4 +1,4 @@
-package eid.mongodb;
+package eid.bing.mongodb;
 
 import com.alibaba.fastjson.JSONArray;
 import com.mongodb.MongoClient;
@@ -18,7 +18,7 @@ import java.util.Properties;
 import java.util.logging.Logger;
 
 /**
- * @Description:
+ * @Description:  Connect to mongodb.
  */
 
 public class EidMonGoDBService {

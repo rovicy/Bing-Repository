@@ -1,0 +1,36 @@
+[
+  {
+    "sourceName": "bing",
+    "url": "jdbc:mysql://localhost:3306/bing",
+    "driveClassName": "com.mysql.jdbc.Driver",
+    "userName": "root",
+    "passWord": "111111",
+    "initialSize": 1,
+    "minIdle": 1,
+    "maxActive": 20,
+    "removeAbandoned": true,
+    "removeAbandonedTimeout": 30,
+    "maxWait": 20000,
+    "timeBetweenEvictionRunsMillis": 2000,
+    "validationQuery": "SELECT 'x'",
+    "testWhileIdle": true,
+    "testOnBorrow": true
+  },
+  {
+    "sourceName": "OrgIndex",
+    "url": "jdbc:mysql://localhost:3306/OrgIndex",
+    "driveClassName": "com.mysql.jdbc.Driver",
+    "userName": "root",
+    "passWord": "111111",
+    "initialSize": 1,
+    "minIdle": 1,
+    "maxActive": 20,
+    "removeAbandoned": true,
+    "removeAbandonedTimeout": 30,
+    "maxWait": 20000,
+    "timeBetweenEvictionRunsMillis": 2000,
+    "validationQuery": "SELECT 'x'",
+    "testWhileIdle": true,
+    "testOnBorrow": true
+  }
+]
