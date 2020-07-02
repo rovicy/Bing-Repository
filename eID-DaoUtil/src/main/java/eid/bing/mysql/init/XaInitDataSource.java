@@ -25,6 +25,7 @@ public class XaInitDataSource {
         List<SourceStruct> list = new ArrayList<SourceStruct>();
         BufferedReader reader = null;
         try {
+            assert in != null;
             reader = new BufferedReader(new InputStreamReader(in));
             String data;
             while ((data = reader.readLine()) != null) {

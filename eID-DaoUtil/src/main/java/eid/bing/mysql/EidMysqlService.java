@@ -1,6 +1,7 @@
-package eid.bing.mysql.service;
+package eid.bing.mysql;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import eid.bing.mysql.dao.InsertDataEvent;
 import eid.bing.mysql.init.InitDataSource;
 import eid.bing.mysql.dao.SaveDataEvent;
 import eid.bing.mysql.dao.DealDataEvent;
@@ -15,12 +16,12 @@ import java.util.logging.Logger;
  * @Description:
  */
 
-public class DataSourceService {
+public class EidMysqlService {
     private DruidDataSource dataSource;
 
-    private static Logger log = Logger.getLogger("DataSourceService");
+    private static Logger log = Logger.getLogger(EidMysqlService.class.getName());
 
-    public DataSourceService(String dbName) {
+    public EidMysqlService(String dbName) {
 
         dataSource = InitDataSource.getOneDataSource(dbName);
     }
@@ -29,14 +30,14 @@ public class DataSourceService {
         return dataSource;
     }
 
-    public void selectForDeal(String sql, DealDataEvent event){
+    public void selectForDeal(String sql, DealDataEvent event) {
         try (Connection con = dataSource.getConnection();
-             Statement st = con.createStatement()){
+             Statement st = con.createStatement()) {
             ResultSet rs = st.executeQuery(sql);
-            while (rs.next()){
+            while (rs.next()) {
                 event.doSomething(rs);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             log.warning("Something wrong with selectWithDeal...");
         }
     }
@@ -76,7 +77,7 @@ public class DataSourceService {
 
     synchronized public boolean batchInsert(String sqlPrefix, List<String> values) {
 
-        if(values == null || values.size() == 0){
+        if (values == null || values.size() == 0) {
             return false;
         }
         boolean isSuccess = false;
@@ -95,7 +96,7 @@ public class DataSourceService {
         return isSuccess;
     }
 
-    synchronized public boolean insertOne(String sql){
+    public boolean insertOne(String sql) {
         boolean isSuccess = false;
         try (Connection con = dataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(sql)) {
@@ -109,16 +110,21 @@ public class DataSourceService {
         }
         return isSuccess;
     }
+    
 
-    synchronized public boolean insertTest(String sql){
+    /*
+    * The insert won't commit unless the event is success.
+    * */
+    public boolean insertAndDeal(String sql, InsertDataEvent event){
         boolean isSuccess = false;
         try (Connection con = dataSource.getConnection();
              PreparedStatement pst = con.prepareStatement(sql)) {
             con.setAutoCommit(false);
             pst.execute();
-            con.commit();
-//            pst.execute();
-            isSuccess = true;
+            if(event.eventInsertData()){
+                con.commit();
+                isSuccess = true;
+            }
         } catch (Exception e) {
             log.warning("Something wrong with insert one data: " + sql);
             log.warning(e.getMessage());
@@ -127,3 +133,4 @@ public class DataSourceService {
     }
 
 }
+

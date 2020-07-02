@@ -1,4 +1,4 @@
-package eid.bing.mysql.service;
+package eid.bing.mysql;
 
 import com.alibaba.druid.pool.xa.DruidXADataSource;
 import com.mysql.jdbc.jdbc2.optional.MysqlXid;
@@ -17,13 +17,13 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 /**
- * @Description:
+ * @Description:  deal the mysql with xaDataSource
  */
 
-public class XaDataSourceService {
-    private static Logger logger = Logger.getLogger("XaDataSourceService");
+public class EidMysqlXaService {
+    private static Logger logger = Logger.getLogger(EidMysqlXaService.class.getName());
 
-    public XaDataSourceService() {
+    public EidMysqlXaService() {
 
     }
 
@@ -39,10 +39,10 @@ public class XaDataSourceService {
         }
         boolean isSuccess = false;
         List<CommitDataStruct> result = new ArrayList<>();
-        XaDataSourceService xaDataSourceService = new XaDataSourceService();
+        EidMysqlXaService eidMysqlXaService = new EidMysqlXaService();
         try {
             for (SourceAndSql sourceAndSql : sourceAndSqlList) {
-                DruidXADataSource ds = xaDataSourceService.getDataSource(sourceAndSql.getSourceName());
+                DruidXADataSource ds = eidMysqlXaService.getDataSource(sourceAndSql.getSourceName());
                 if (ds == null) {
                     logger.info("The dataSource of " + sourceAndSql.getSourceName() + " doesn't exist..");
                     return false;
