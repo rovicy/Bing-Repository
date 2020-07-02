@@ -110,10 +110,10 @@ public class EidMysqlService {
         }
         return isSuccess;
     }
-    
+
 
     /*
-    * The insert won't commit unless the event is success.
+    * The insert won't be commit unless the event is success.
     * */
     public boolean insertAndDeal(String sql, InsertDataEvent event){
         boolean isSuccess = false;
