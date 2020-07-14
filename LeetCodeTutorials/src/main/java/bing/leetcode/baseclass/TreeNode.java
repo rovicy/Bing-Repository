@@ -6,9 +6,9 @@ package bing.leetcode.baseclass;
 
 public class TreeNode {
 
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
     public TreeNode(int val) {
         this.val = val;
@@ -22,15 +22,4 @@ public class TreeNode {
         this.right = right;
     }
 
-    public int getVal() {
-        return val;
-    }
-
-    public TreeNode getLeft() {
-        return left;
-    }
-
-    public TreeNode getRight() {
-        return right;
-    }
 }

@@ -19,7 +19,7 @@ import java.util.Queue;
  * ]
  */
 
-public class BinaryTreeLevelOrderTraversalSolution {
+public class Solution107 {
 
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -33,9 +33,9 @@ public class BinaryTreeLevelOrderTraversalSolution {
             int levelSize = queue.size();
             List<Integer> list = new ArrayList<>();
             for(int i = 0; i<levelSize; i++){
-                if(queue.peek().getLeft() != null) queue.offer(queue.peek().getLeft());
-                if(queue.peek().getRight() != null) queue.offer(queue.peek().getRight());
-                list.add(queue.poll().getVal());
+                if(queue.peek().left != null) queue.offer(queue.peek().left);
+                if(queue.peek().right != null) queue.offer(queue.peek().right);
+                list.add(queue.poll().val);
 
             }
             sourceList.add(0, list);

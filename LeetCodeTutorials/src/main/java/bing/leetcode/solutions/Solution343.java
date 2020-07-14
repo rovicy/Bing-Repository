@@ -4,9 +4,9 @@ package bing.leetcode.solutions;
  * @Description:
  */
 
-public class IntegerBreakSolution {
+public class Solution343 {
 
-    public IntegerBreakSolution() {
+    public Solution343() {
 
     }
 
